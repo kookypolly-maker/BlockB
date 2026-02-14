@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    
+    <!-- PWA Meta Tags -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Block Blast">
+    <meta name="theme-color" content="#f5cad8">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Block Blast">
+    
+    <!-- Apple Touch Icons -->
+    <link rel="apple-touch-icon" href="icons/icon-152.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="icons/icon-152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="icons/icon-192.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="icons/icon-192.png">
+    
+    <title>Block Blast</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="light-theme">
+    <div class="game-wrapper">
+        <div class="game-container">
+            <header>
+                <h1>BLOCK BLAST</h1>
+                <div class="header-buttons">
+                    <button id="newGameBtn" class="new-game-btn" title="Новая игра">↻</button>
+                    <div class="theme-dropdown">
+                        <button id="themeToggle" class="theme-toggle-btn" title="Темы">🎨</button>
+                        <div id="themeMenu" class="theme-menu hidden">
+                            <button id="themeLight" class="theme-menu-item" data-theme="light-theme">🌸 Утро</button>
+                            <button id="themeDark" class="theme-menu-item" data-theme="dark-theme">🌙 Ночь</button>
+                            <button id="themeCoffeeDark" class="theme-menu-item" data-theme="coffee-dark-theme">☕️ Капучино</button>
+                            <button id="themeCoffeeLight" class="theme-menu-item" data-theme="coffee-light-theme">🥛 Латте</button>
+                            <button id="themeSky" class="theme-menu-item" data-theme="sky-theme">☁️ Небо</button>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            
+            <div class="score-container">
+                <div class="score-box">
+                    <span class="score-label">СЧЁТ</span>
+                    <span id="score" class="score-value">0</span>
+                </div>
+                <div class="score-box">
+                    <span class="score-label">РЕКОРД</span>
+                    <span id="highScore" class="score-value">0</span>
+                </div>
+            </div>
+
+            <div class="game-area">
+                <div id="gameGrid" class="game-grid"></div>
+
+                <div class="blocks-panel">
+                    <div id="nextBlocks" class="blocks-container"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="draggableBlock" class="draggable-block hidden"></div>
+    <script src="script.js"></script>
+</body>
+</html>
